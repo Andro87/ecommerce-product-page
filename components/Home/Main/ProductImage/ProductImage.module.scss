@@ -1,0 +1,112 @@
+@use "styles/helpers" as *;
+
+.embla {
+    position: relative;
+    overflow: hidden;
+}
+
+.embla_zoom {
+    padding: 0 20px;
+}
+
+.embla__viewport {
+    overflow: hidden;
+}
+
+.embla__container {
+    display: flex;
+}
+
+.embla__slide {
+    position: relative;
+    flex: 0 0 100%;
+    margin-left: 5px;
+}
+
+.embla__slide__inner {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    @include breakpoint($large) {
+        border-radius: 15px;
+    }
+}
+
+.embla__slide__img {
+    max-width: 100%;
+}
+
+.embla__thumb {
+    display: none;
+
+    @include breakpoint($large) {
+        display: initial;
+    }
+}
+
+.embla__container__thumb {
+    cursor: default;
+    justify-content: space-between;
+    margin-top: 35px;
+}
+.zoom {
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.embla__slide__thumb {
+    flex: 0 0 0;
+}
+
+.embla__slide__inner__thumb {
+    cursor: pointer;
+    border: 0;
+    outline: 0;
+    height: 88px;
+    width: 88px;
+    background-color: transparent;
+    border-radius: 10px;
+}
+
+.btn_container {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 16px;
+    @include breakpoint($large) {
+        display: none;
+    }
+}
+.zoom_btn {
+    @include breakpoint($large) {
+        display: flex;
+        padding: 0;
+        left: 0;
+    }
+}
+.btn {
+    border: none;
+    background-color: var(--white);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    @include breakpoint($large) {
+        width: 56px;
+        height: 56px;
+    }
+    svg {
+        path {
+            @include transition;
+            &:hover {
+                stroke: var(--orange);
+            }
+        }
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+}

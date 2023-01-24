@@ -1,0 +1,37 @@
+@use "styles/helpers" as *;
+
+.home_container {
+    background-color: var(--white);
+}
+
+.home_container_background_mobile {
+    position: relative;
+
+    &::after {
+        content: "";
+        background-color: hsla(0, 0, 0, 0.75);
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        min-height: 100vh;
+    }
+}
+.home_container_background_zoom {
+    position: relative;
+
+    &::after {
+        display: none;
+        @include breakpoint($large) {
+            display: initial;
+            content: "";
+            background-color: hsla(0, 0, 0, 0.75);
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0;
+        }
+    }
+}

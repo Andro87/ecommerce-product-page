@@ -1,0 +1,155 @@
+@use "styles/helpers" as *;
+
+.header_container {
+    display: flex;
+    align-items: center;
+    max-width: 90%;
+    margin: auto;
+    padding-top: 20px;
+    padding-bottom: 25px;
+    position: relative;
+    @include breakpoint($large) {
+        padding-top: 28px;
+        padding-bottom: 34px;
+        width: 90%;
+        max-width: 1110px;
+        border-bottom: 1px solid var(--grey);
+    }
+}
+.menu_btn {
+    margin-right: 16px;
+    position: relative;
+    z-index: 10000;
+    background-color: transparent;
+    border: none;
+
+    @include breakpoint($large) {
+        display: none;
+    }
+}
+
+.navigation {
+    display: none;
+    @include breakpoint($large) {
+        display: initial;
+        margin-left: 56px;
+    }
+}
+
+.navigation_mobile {
+    background-color: var(--white);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    width: 70%;
+    z-index: 1000;
+}
+.nav_list {
+    list-style: none;
+    padding: 0;
+    margin-top: 90px;
+    width: 92%;
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    @include breakpoint($large) {
+        margin-top: initial;
+        width: initial;
+        flex-direction: row;
+        gap: 30px;
+        margin-bottom: 0;
+    }
+}
+
+.nav_link {
+    text-decoration: none;
+    font-family: inherit;
+    font-size: 1.125rem;
+    font-weight: 700;
+    line-height: 1.625rem;
+    text-transform: capitalize;
+    color: var(--very-dark-blue);
+
+    @include breakpoint($large) {
+        font-size: 0.9375rem;
+        font-weight: 400;
+        line-height: 1.625rem;
+        color: var(--dark-grayish-blue);
+        position: relative;
+
+        &:hover {
+            color: var(--very-dark-blue);
+
+            &:after {
+                content: "";
+                width: 100%;
+                height: 4px;
+                background-color: var(--orange);
+                position: absolute;
+                bottom: -52px; /**/
+                left: 0;
+            }
+        }
+    }
+}
+
+.cart_container {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    svg {
+        &:hover {
+            cursor: pointer;
+        }
+
+        & path:hover {
+            @include transition;
+            fill: var(--black);
+        }
+    }
+
+    @include breakpoint($medium) {
+        gap: 15px;
+    }
+}
+
+.cart_box {
+    position: relative;
+
+    p {
+        font-size: 0.625rem;
+        font-weight: 700;
+        line-height: 0.75rem;
+        color: var(--white);
+        background-color: var(--orange);
+        border-radius: 7px;
+        text-align: center;
+        padding: 0.25em 0.8em;
+        position: absolute;
+        bottom: 5px;
+        right: -10px;
+    }
+}
+.cart_icon:hover {
+    cursor: pointer;
+}
+.customer_img {
+    border: 2px solid transparent;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    @include transition;
+    @include breakpoint($medium) {
+        width: 50px;
+        height: 50px;
+    }
+    &:hover {
+        cursor: pointer;
+        border: 2px solid var(--orange);
+    }
+}

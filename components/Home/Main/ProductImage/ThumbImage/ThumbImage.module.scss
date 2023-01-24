@@ -1,0 +1,24 @@
+@use "styles/helpers" as *;
+.slide_btn {
+    border: none;
+    width: 88px;
+    height: 88px;
+    border-radius: 10px;
+    display: flex;
+    cursor: pointer;
+    overflow: hidden;
+    background-color: var(--white);
+}
+.slide_btn_img {
+    max-width: 100%;
+    @include transition;
+    &:hover {
+        opacity: 0.5;
+    }
+}
+.selected {
+    border: 2px solid var(--orange);
+}
+.selected .slide_btn_img {
+    opacity: 0.5;
+}

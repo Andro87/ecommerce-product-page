@@ -1,0 +1,18 @@
+@use "styles/helpers" as *;
+
+.main {
+    @include breakpoint($large) {
+        padding-block: 90px;
+    }
+}
+
+.main_container {
+    @include breakpoint($large) {
+        width: 80%;
+        max-width: 1015px;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 50px;
+    }
+}
