@@ -33,8 +33,8 @@ Users should be able to:
 
 ### Links
 
--   Solution URL: [Solution URL ](https://github.com/Andro87/e-commerce-product-page.git)
--   Live Site URL: [Live site URL here](https://e-commerce-product-page-six.vercel.app/)
+-   Solution URL: [Solution URL ](https://github.com/Andro87/ecommerce-product-page.git)
+-   Live Site URL: [Live site URL here](https://ecommerce-product-page-gilt.vercel.app/)
 
 ## My process
 
