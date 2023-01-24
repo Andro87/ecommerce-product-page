@@ -65,6 +65,11 @@
 .clear_btn {
     background-color: transparent;
     border: none;
+    svg {
+        &:hover {
+            cursor: pointer;
+        }
+    }
 }
 
 .btn_checkout {
